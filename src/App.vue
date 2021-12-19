@@ -1,16 +1,23 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
+  {{ fields }}
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, PropType } from 'vue';
 import HelloWorld from './components/HelloWorld.vue';
+import FormFieldData from './types/FormFieldData';
 
 export default defineComponent({
   name: 'App',
   components: {
     HelloWorld,
+  },
+  props: {
+    fields: {
+      type: Object as PropType<Record<string, FormFieldData>>,
+    },
   },
 });
 </script>
