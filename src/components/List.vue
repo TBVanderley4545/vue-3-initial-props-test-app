@@ -13,8 +13,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { defineEmits, defineProps, ref } from 'vue';
-  import type { Ref } from 'vue';
+  import { defineEmits, defineProps, Ref, ref } from 'vue';
 
   defineProps({
     mySpecialProp: {
